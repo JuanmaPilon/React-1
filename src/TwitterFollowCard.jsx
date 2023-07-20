@@ -1,7 +1,9 @@
 import './App.css'
 
-function TwitterFollowCard ({ UserName, name, isFollowing }) {
-    const imgSrc = `https://unavatar.io/reddit/kikobeats${username}`
+function TwitterFollowCard ({ formattedUserName, UserName, name, isFollowing }) {
+    const imgSrc = `https://unavatar.io/reddit/kikobeats${UserName}`
+
+
 
     return (
         <article className="tw-followCard">
@@ -10,7 +12,7 @@ function TwitterFollowCard ({ UserName, name, isFollowing }) {
             </img>
             <div className="tw-followCard-div">
                 <strong>{ name }</strong>
-                <span className="tw-followCard-span">{ UserName }</span>
+                <span className="tw-followCard-span-infoUserName"> @{ UserName }</span>
             </div>
         </header>
         <aside>
